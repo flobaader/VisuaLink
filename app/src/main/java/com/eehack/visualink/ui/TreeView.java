@@ -19,11 +19,20 @@ public class TreeView extends View {
     private Bitmap mLeafBitmap;
 
     private int leafCount = 15;
-    private int mTreeSize = 0;
+    private float mTreeSize = 0;
 
     private LeafPosition[] leafPositions = {
-            new LeafPosition(0.25f, 0.25f, 45, 1f),
-            new LeafPosition(0.5f, 0.5f, 90, 1f)};
+            new LeafPosition(0.23f, 0.23f, 55f, 0.9f),
+            new LeafPosition(0.0f, 0.26f, 280f, 0.8f),
+            new LeafPosition(0.03f, 0.41f, 20f, 1f),
+            new LeafPosition(0.1f, 0.52f, 270f, 1.1f),
+            new LeafPosition(0.1f, 0.7f, 200f, 0.8f),
+            new LeafPosition(0.22f, 0f, 0f, 1.1f),
+            new LeafPosition(0.14f, 0.16f, 210f, 0.7f),
+            new LeafPosition(0.4f, 0.04f, 15f, 1.3f),
+            new LeafPosition(0.4f, 0.23f, 0f, 0.9f),
+            new LeafPosition(0.45f, 0.17f, 12f, 0.85f)
+    };
 
     public TreeView(Context context) {
         super(context);
@@ -75,18 +84,36 @@ public class TreeView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         if (w / h < 1) {
             mTreeDrawable.setBounds(10, 10, w - 10, w - 10);
-            mTreeSize = w-20;
+            mTreeSize = w - 20;
         } else {
             mTreeDrawable.setBounds(10, 10, h - 10, h - 10);
-            mTreeSize = h-20;
+            mTreeSize = h - 20;
         }
+
+        float sf = mTreeSize / 1000;
+
+        for (LeafPosition lp : leafPositions) {
+            lp.matrix = new Matrix();
+            lp.matrix.reset();
+
+            lp.matrix.postScale(sf * lp.scale, sf * lp.scale);
+            lp.matrix.postRotate(lp.rot);
+            lp.matrix.postTranslate(mTreeSize * lp.xPos + 10f, mTreeSize * lp.yPos + 10f);
+
+
+        }
+
+        invalidate();
+
     }
 
-    public void setLeafCount(int count) {
+    public void setLeafCount(int branch, int count) {
         this.leafCount = (Math.min(Math.max(0, count), 100));
     }
 
     private class LeafPosition {
+        private final float rot;
+        private final float scale;
         public float xPos;
         public float yPos;
         public Matrix matrix;
@@ -94,17 +121,22 @@ public class TreeView extends View {
         public LeafPosition(float xPos, float yPos, float rot, float scale) {
             this.xPos = xPos;
             this.yPos = yPos;
-            this.matrix = new Matrix();
-            matrix.setTranslate(mTreeSize*xPos + 10, mTreeSize * yPos + 10);
-
-            matrix.setRotate(rot);
-
-            float sf = mTreeSize/1000;
-
-            matrix.setScale( scale, scale);
+            this.rot = rot;
+            this.scale = scale;
         }
 
 
+    }
+
+    private class Branch {
+        float xPos, yPos;
+        public String name;
+        public LeafPosition[] positions;
+
+        public Branch(String name, LeafPosition[] positions) {
+            this.name = name;
+            this.positions = positions;
+        }
     }
 
 
