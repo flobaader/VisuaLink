@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(this, ChartActivity.class);
+                Intent i = new Intent(MainActivity.this, ChartActivity.class);
                 startActivity(i);
             }
         });
