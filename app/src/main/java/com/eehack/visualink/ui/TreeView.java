@@ -31,7 +31,13 @@ public class TreeView extends View {
             new LeafPosition(0.14f, 0.16f, 210f, 0.7f),
             new LeafPosition(0.4f, 0.04f, 15f, 1.3f),
             new LeafPosition(0.4f, 0.23f, 0f, 0.9f),
-            new LeafPosition(0.45f, 0.17f, 12f, 0.85f)
+            new LeafPosition(0.45f, 0.14f, 330f, 0.85f),
+            new LeafPosition(0.6f, -0.05f, 45f, 0.7f),
+            new LeafPosition(0.74f, 0.04f, 30f, 1f),
+            new LeafPosition(0.73f, 0.08f, 55f, 1.15f),
+            new LeafPosition(0.89f, 0.12f, 5f, 0.93f),
+            new LeafPosition(0.9f, 0.27f, 90f, 1.06f),
+            new LeafPosition(0.9f, 0.04f, 30f, 1f)
     };
 
     public TreeView(Context context) {
