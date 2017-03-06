@@ -16,9 +16,14 @@ This project was created during the energy efficiency hack 2017.
 
 ### Team members:
 Dennis Metz - Business
+
 Hannes Höcker - Energy Engineer
-Firat Günyel - Energy Engineer
+
+Firat Günyel - Mechanical Engineer
+
 Christina Potzheimer - Design / UX
+
 Florian Baader - Coding
+
 Matthias Weirich - Coding
 
