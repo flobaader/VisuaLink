@@ -11,7 +11,88 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.eehack.visualink.MainActivity">
 
-    <com.eehack.visualink.ui.TreeView
+    <ViewFlipper
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tree_without_leaves"
+        android:id="@+id/treeView1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/tree_with_leaves"
+            android:id="@+id/treeView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"/>
+
+    </ViewFlipper>
+    <TextView
+        android:text="Kitchen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bedroom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/kitchen"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:background="#fff"/>
+
+    <TextView
+        android:text="Living Room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/living_room"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff"/>
+
+    <TextView
+        android:text="Bathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/kitchen"
+        android:layout_alignEnd="@+id/kitchen"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="9dp"
+        android:id="@+id/bathroom"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:background="#fff"/>
+
+    <TextView
+        android:text="Bedroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:id="@+id/bedroom"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:background="#ffffff"
+        android:layout_below="@+id/living_room"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
