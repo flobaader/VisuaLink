@@ -14,7 +14,7 @@
     <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@"
+        android:id="@+id/flipper"
         >
     <ImageView
         android:layout_width="wrap_content"
@@ -70,21 +70,6 @@
         android:background="#fff"/>
 
     <TextView
-        android:text="Bathroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/kitchen"
-        android:layout_alignEnd="@+id/kitchen"
-        android:layout_marginRight="36dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginTop="9dp"
-        android:id="@+id/bathroom"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        android:background="#fff"/>
-
-    <TextView
         android:text="Bedroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,5 +81,50 @@
         android:layout_below="@+id/living_room"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Bathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:id="@+id/bathroom"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:background="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp" />
+
+    <Button
+        android:text="Chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_chart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/total"
+        android:layout_alignEnd="@+id/total" />
+
+    <TextView
+        android:text="-30%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/total"
+        android:textSize="40sp"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/button_chart"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Total consumption:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalDesc"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:layout_above="@+id/total"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
