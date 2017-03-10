@@ -15,6 +15,9 @@ the user has a daily challenge to save money & save the environment.
 This project was created during the energy efficiency hack 2017.
 
 ### Team members:
+
+![The Team](https://raw.githubusercontent.com/flobaader/VisuaLink/master/team.jpg)
+
 Dennis Metz - Business
 
 Hannes Höcker - Energy Engineer
