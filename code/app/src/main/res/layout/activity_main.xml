@@ -51,7 +51,8 @@
         android:id="@+id/kitchen"
         android:textSize="18sp"
         android:textStyle="normal|bold"
-        android:background="#fff"/>
+        android:background="#fff"
+        android:textColor="#000"/>
 
     <TextView
         android:text="Living Room"
@@ -60,6 +61,7 @@
         android:id="@+id/living_room"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
+        android:textColor="#000"
         android:textStyle="normal|bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -80,7 +82,8 @@
         android:background="#ffffff"
         android:layout_below="@+id/living_room"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#000"/>
 
     <TextView
         android:text="Bathroom"
@@ -95,7 +98,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="9dp" />
+        android:layout_marginTop="9dp"
+        android:textColor="#000"/>
 
     <Button
         android:text="Chart"
@@ -104,12 +108,14 @@
         android:id="@+id/button_chart"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/total"
-        android:layout_alignEnd="@+id/total" />
+        android:layout_alignEnd="@+id/total"
+        android:textColor="#000"/>
 
     <TextView
         android:text="-30%"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:layout_marginBottom="14dp"
         android:id="@+id/total"
         android:textSize="40sp"
@@ -125,6 +131,7 @@
         android:textStyle="normal|bold"
         android:textSize="20sp"
         android:layout_above="@+id/total"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000"/>
 
 </RelativeLayout>

@@ -80,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
             totalDesc.setVisibility(View.VISIBLE);
             total.setText("-30%");
         }else{
-            kitchen.setText("Kitchen: +2%");
-            livingRoom.setText("Living Room: +4%");
-            bedroom.setText("Bedroom: +9%");
-            bathroom.setText("Bathroom: -14%");
+            kitchen.setText("Kitchen");
+            livingRoom.setText("Living Room:");
+            bedroom.setText("Bedroom:");
+            bathroom.setText("Bathroom:");
 
             totalDesc.setVisibility(View.INVISIBLE);
             total.setVisibility(View.INVISIBLE);

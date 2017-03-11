@@ -16,16 +16,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/flipper2"
         android:layout_alignParentTop="true">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true" />
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/diag_notOptB"
-            android:id="@+id/imageView" />
+            app:srcCompat="@drawable/notoptb"
+            android:id="@+id/imageView"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/optb"
+            android:id="@+id/imgv2"
+            android:adjustViewBounds="true"/>
+
 
     </ViewFlipper>
 </RelativeLayout>
