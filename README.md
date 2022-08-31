@@ -29,7 +29,7 @@ Dennis Metz - Business
 
 Hannes Höcker - Energy Engineer
 
-Firat Günyel - Mechanical Engineer
+Firat - Mechanical Engineer
 
 Christina Potzheimer - Design / UX
 
